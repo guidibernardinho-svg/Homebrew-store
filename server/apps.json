@@ -1,0 +1,38 @@
+[
+  {
+    "name": "FBI",
+    "author": "Steveice10",
+    "description": "Open source CIA installer and manager for 3DS.",
+    "version": "2.6.1",
+    "url": "https://your-server.com/files/FBI.cia",
+    "type": "cia",
+    "size": 1048576
+  },
+  {
+    "name": "Checkpoint",
+    "author": "FlagBrew",
+    "description": "Fast and simple save manager for 3DS and Switch.",
+    "version": "3.7.4",
+    "url": "https://your-server.com/files/Checkpoint.3dsx",
+    "type": "3dsx",
+    "size": 2097152
+  },
+  {
+    "name": "PKSM",
+    "author": "Bernardo Giordano",
+    "description": "Gen I to Gen VIII save manager.",
+    "version": "7.1.2",
+    "url": "https://your-server.com/files/PKSM.cia",
+    "type": "cia",
+    "size": 3145728
+  },
+  {
+    "name": "ftpd",
+    "author": "mtheall",
+    "description": "FTP server homebrew for 3DS.",
+    "version": "3.1.0",
+    "url": "https://your-server.com/files/ftpd.3dsx",
+    "type": "3dsx",
+    "size": 524288
+  }
+]
