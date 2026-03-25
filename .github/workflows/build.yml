@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install portlibs
+        run: |
+          dkp-pacman -Sy --noconfirm \
+            3ds-curl \
+            3ds-jansson \
+            3ds-mbedtls
+
+      - name: Build
+        run: make
+        env:
+          DEVKITPRO: /opt/devkitpro
+          DEVKITARM: /opt/devkitpro/devkitARM
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: homebrew_shop
+          path: |
+            homebrew_shop.3dsx
+            homebrew_shop.smdh
